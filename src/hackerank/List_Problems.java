@@ -8,7 +8,7 @@ public class List_Problems
 	public static void List()
 	{
 		Scanner sc = new Scanner(System.in);
-		LinkedList<Integer> SL = new LinkedList<>();
+		LinkedList<Integer> SL = new LinkedList<Integer>();
 		
 		int n, q, value, i , index;
 		n=sc.nextInt(); q=sc.nextInt();

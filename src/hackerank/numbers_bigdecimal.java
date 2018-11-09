@@ -11,7 +11,7 @@ public class numbers_bigdecimal {
 			st[i]=sc.next();
 		}
 		sc.close();
-		ArrayList.sort(st, new Comparator<String>() {
+		Arrays.sort(st, new Comparator<String>() {
 		    public int compare(String o1, String o2) {
 			if (o1 == null || o2 == null) {
 			    return 0;
