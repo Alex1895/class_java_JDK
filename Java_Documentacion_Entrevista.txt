@@ -1,0 +1,158 @@
+Herencia en Java
+Es una caracteristica de la POO
+Evitar duplicacion de codigo 
+Representar comportamiento en comun 
+Ejemplo de Herencia:
+
+clase persona 
+nombre genero edad direccion
+
+clase empleado
+idempleado
+sueldo
+
+clase cliente
+idcliente
+fecha de registro 
+vip 
+
+metodos comunes get / set para cada atributo 
+--------------------------------------------------------------------------------------------------------------------------------------------
+Polimorfismo en Java
+El polimorfismo en Java es un concepto mediante el cual podemos realizar una sola acción de diferentes maneras .
+El polimorfismo se deriva de 2 palabras griegas: poli y morfos. La palabra "poli" significa muchos y "morfos" significa formas.
+Entonces el polimorfismo significa muchas formas.
+el envío de métodos dinámicos es un proceso en el que una llamada a un método anulado se resuelve en tiempo de ejecución en lugar de en tiempo de compilación.
+ejemplo 
+class perro con un metodo ladrar
+class perro chihuahua que hace llamada al metodo ladrar pero con otros parametros que seria intensidad y cantidad, 
+class perro loberman que hace llamada al metodo ladrar de la clase perro con otros parametros que seria intensidad y cantidad 
+OJO los parametros son los mismo pero el resultado no es lo mismo porque un chihuahua no ladra igual que loberman asi que son diferentes resultados 
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Encapsulacion en Java
+Este concepto consiste en la ocultación del estado o de los datos miembro de un objeto,
+de forma que sólo es posible modificar los mismos mediante los métodos definidos para dicho objeto.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Abstraccion en Java
+La abstracción de datos también se puede definir como el proceso de identificar solo las características requeridas de un objeto, 
+ignorando los detalles irrelevantes.
+Las propiedades y comportamientos de un objeto lo diferencian de otros objetos de tipo similar y también ayudan a clasificar / agrupar los objetos.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Interfaz en Java
+Una interfaz en Java es una colección de métodos abstractos y propiedades constantes.
+En las interfaces se especifica qué se debe hacer pero no su implementación.
+Serán las clases que implementen estas interfaces las que describan la lógica del comportamiento de los métodos.
+
+------------------------------------------------------------------------------------------------------------------
+abstract en Java
+Clases base abstractas completas. Son las clases tanto explícitamente declaradas como abstractas como las que contienen métodos abstractos (no implementados).
+Excepto la capacidad de instanciación, tienen las mismas capacidades que una clase o tipo concreto.
+es una palabra clave de Java. Se puede aplicar a una clase y métodos. Una clase abstracta no puede ser instanciada directamente. 
+Debe colocarse antes del tipo de variable o del tipo de retorno de método. 
+Se recomienda colocarlo después del modificador de acceso y después de la staticpalabra clave. 
+Una clase no abstracta es una clase concreta. 
+Una clase abstracta no puede ser final.
+
+los metodos abstractos se declaran en como metodos vacios en la clase abstract.
+
+ejemplo 
+public class abstract example1();
+public abstract void example1();
+public void e2();
+
+en otra clase se declara las entrañas del metodo que no se declaro
+-------------------------------------------------------------------------------
+Sobre Carga de Constructores en Java  @Override
+Se llaman métodos sobrecargados a métodos con el mismo nombre en una clase. 
+Para saber qué método se ejecuta cuando se le llama, se decide por el tipo de los parámetros que se le pasan. 
+La sobrecarga se produce cuando dos o más métodos en una clase tienen el mismo nombre de método pero diferentes parámetros.
+
+Haremos una clase de ejemplo con un método sobrecargado.
+
+ejemplo de un Override:
+La anulación del método significa definir un método en una clase secundaria que ya está definida en la clase principal con la misma firma de método:
+mismo nombre, argumentos y tipo de retorno (después de Java 5, también puede usar un tipo covariante como tipo de retorno).
+
+metodo ladrar woof;
+metodo ladrar miau;
+
+ejemplo de Overload:
+La sobrecarga de métodos significa proporcionar dos métodos separados en una clase con el mismo nombre pero diferentes argumentos, 
+mientras que el tipo de retorno del método puede ser diferente o no, lo que nos permite reutilizar el mismo nombre de método.
+ metodo ladrar woof;
+ metodo ladrar woof + cantidad;
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Final en Java
+Final se utiliza para aplicar restricciones en clase, método y variable.
+La clase final no se puede heredar, el método final no se puede anular y el valor de la variable final no se puede cambiar.
+Final es una palabra clave.
+
+Finally  en Java
+Finalmente se utiliza para colocar código importante, se ejecutará si la excepción se maneja o no.
+Finalmente hay un bloque.
+
+Finalize  en Java 
+Finalizar se utiliza para realizar un proceso de limpieza justo antes de que el objeto se recoja.
+Finalizar es un método.
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Colecciones de Datos:
+Las colecciones en Java. Vamos a ver qué son y los distintos tipos de colecciones más usados que existen (Set, List y Map).
+También, vamos a ver que cada uno de los distintos tipos de colecciones puede tener, además, distintas implementaciones, lo que ofrece funcionalidad distinta.
+
+Set:
+define una colección que no puede contener elementos duplicados.
+Esta interfaz contiene, únicamente, los métodos heredados de Collection añadiendo la restricción de que los elementos duplicados están prohibidos.
+
+
+ArrayList:
+La ArrayListclase tiene muchos métodos útiles. Por ejemplo:
+add, remove, get, set, clear, size, sort
+
+ejemplos de arraysList
+
+
+Map:
+
+----------------------------------------------------------------------------------------------------------------------
+Autoboxing Unboxing en Java
+
+Autoboxing
+Autoboxing es la conversión automática que realiza el compilador de Java entre los tipos primitivos y sus correspondientes clases de envoltorios de objetos.
+Por ejemplo, convertir un int en un entero , un doble en un doble , etc.
+ejemplo:
+		char c = 'M'; //Autoboxing
+		String s = Character.toString(c);
+		System.out.println(s);
+
+Unboxing
+Si la conversión es a la inversa, esto se llama unboxing 
+ejemplo:
+		Integer i = 100; //Unboxing
+		int i1= i;
+		System.out.println(i1);
+----------------------------------------------------------------------------------------------------------------------
+micro servicios Rest y Soap  en java 
+Los micro servicios son mensajes en formatos xml o json dependiendo el protocolo que se use como pueden ser ejemplo get y post ya que son los mas comunes 
+dentro de los micro servicios soap y rest y se suele utilizar un response con codigo http como puede ser 200 o 404 o 500 dependiendo de la situacion del microservicio
+
+los protocolos mas usados de un microservicio son :
+GET //para leer un conjunto de datos 
+POST  // para enviar un conjunto de datos 
+PUT  // para editar
+DELETE //para eliminar 
+
+codigos http mas usados:
+200 - Ok 
+400 – Bad Request
+401 – Authorization Required
+404 – Not Found
+408 – Request Time-Out
+500 – Internal Server Error
+502 – Bad Gateway
+504 – Gateway Time-Out
+
+
+
